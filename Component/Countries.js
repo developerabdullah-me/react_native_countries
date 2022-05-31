@@ -1,4 +1,4 @@
-import { View, Text } from 'react-native'
+import { View, Text ,TextInput,StyleSheet} from 'react-native'
 import React from 'react'
 import React,{ useState,useEffect } from 'react';
 import Country from './Country'
@@ -16,7 +16,13 @@ export default function Countries() {
       <Text> hello country's</Text>
       <Text> Dabdullah</Text>
       <Text> Abdullah@b69</Text>
-
+<TextInput
+ style={styles.input}
+ onChangeText={onChangeNumber}
+ value={number}
+ placeholder="useless placeholder"
+ keyboardType="numeric"
+></TextInput>
 
       <scroll>
         {
@@ -27,3 +33,11 @@ export default function Countries() {
     </View>
   )
 }
+const styles = StyleSheet.create({
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+    padding: 10,
+  }
+})
